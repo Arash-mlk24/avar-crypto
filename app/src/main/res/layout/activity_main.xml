@@ -94,4 +94,48 @@
         app:layout_constraintStart_toEndOf="@+id/emirates_flag"
         app:layout_constraintTop_toBottomOf="@id/canada_edt_text" />
 
+    <ImageView
+        android:src="@mipmap/iran"
+        android:id="@+id/iran_flag"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emirates_flag" />
+
+    <EditText
+        android:id="@+id/iran_edt_text"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iran_flag"
+        app:layout_constraintTop_toBottomOf="@id/emirates_edt_text" />
+
+    <ImageView
+        android:src="@mipmap/euro"
+        android:id="@+id/euro_flag"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iran_flag" />
+
+    <EditText
+        android:id="@+id/euro_edt_text"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/euro_flag"
+        app:layout_constraintTop_toBottomOf="@id/iran_edt_text" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

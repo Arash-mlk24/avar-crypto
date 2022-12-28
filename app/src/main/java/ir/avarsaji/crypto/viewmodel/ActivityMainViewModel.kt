@@ -16,6 +16,8 @@ class ActivityMainViewModel @Inject constructor(
     private val canadaText: MutableLiveData<String> = MutableLiveData()
     private val emiratesText: MutableLiveData<String> = MutableLiveData()
     private val englandText: MutableLiveData<String> = MutableLiveData()
+    private val iranText: MutableLiveData<String> = MutableLiveData()
+    private val euroText: MutableLiveData<String> = MutableLiveData()
 
 
     fun getErrorMessageObserver(): MutableLiveData<String> {
@@ -56,5 +58,21 @@ class ActivityMainViewModel @Inject constructor(
 
     fun setEmiratesText(errorText: String) {
         emiratesText.postValue(errorText)
+    }
+
+    fun getIranTextObserver(): MutableLiveData<String> {
+        return iranText
+    }
+
+    fun setIranText(errorText: String) {
+        iranText.postValue(errorText)
+    }
+
+    fun getEuroTextObserver(): MutableLiveData<String> {
+        return euroText
+    }
+
+    fun setEuroText(errorText: String) {
+        euroText.postValue(errorText)
     }
 }

@@ -42,12 +42,16 @@ class MainActivity : AppCompatActivity() {
         binding.englandEdtText.addTextChangedListener(InputTextWatcher(viewModel, "england"))
         binding.emiratesEdtText.addTextChangedListener(InputTextWatcher(viewModel, "emirates"))
         binding.canadaEdtText.addTextChangedListener(InputTextWatcher(viewModel, "canada"))
+        binding.iranEdtText.addTextChangedListener(InputTextWatcher(viewModel, "iran"))
+        binding.euroEdtText.addTextChangedListener(InputTextWatcher(viewModel, "euro"))
 
         viewModel.getUsaTextObserver().observe(this) {
             if (binding.usaEdtText.isFocused) {
                 binding.emiratesEdtText.setText(if (it == "") "" else (it.toDouble() * 3.6701).toString())
                 binding.canadaEdtText.setText(if (it == "") "" else (it.toDouble() * 1.3434).toString())
                 binding.englandEdtText.setText(if (it == "") "" else (it.toDouble() * 0.8157).toString())
+                binding.iranEdtText.setText(if (it == "") "" else (it.toDouble() * 42423.2432).toString())
+                binding.euroEdtText.setText(if (it == "") "" else (it.toDouble() * 0.9499).toString())
             }
         }
 
@@ -56,6 +60,8 @@ class MainActivity : AppCompatActivity() {
                 binding.emiratesEdtText.setText(if (it == "") "" else (it.toDouble() / 1.3434 * 3.6701).toString())
                 binding.usaEdtText.setText(if (it == "") "" else (it.toDouble() / 1.3434).toString())
                 binding.englandEdtText.setText(if (it == "") "" else (it.toDouble() / 1.3434 * 0.8157).toString())
+                binding.iranEdtText.setText(if (it == "") "" else (it.toDouble() / 1.3434 * 42423.2432).toString())
+                binding.euroEdtText.setText(if (it == "") "" else (it.toDouble() / 1.3434 * 0.9499).toString())
             }
         }
 
@@ -64,6 +70,8 @@ class MainActivity : AppCompatActivity() {
                 binding.emiratesEdtText.setText(if (it == "") "" else (it.toDouble() / 0.8157 * 3.6701).toString())
                 binding.canadaEdtText.setText(if (it == "") "" else (it.toDouble() / 0.8157 * 1.3434).toString())
                 binding.usaEdtText.setText(if (it == "") "" else (it.toDouble() / 0.8157).toString())
+                binding.iranEdtText.setText(if (it == "") "" else (it.toDouble() / 0.8157 * 42423.2432).toString())
+                binding.euroEdtText.setText(if (it == "") "" else (it.toDouble() / 0.8157 * 0.9499).toString())
             }
         }
 
@@ -72,6 +80,28 @@ class MainActivity : AppCompatActivity() {
                 binding.usaEdtText.setText(if (it == "") "" else (it.toDouble() / 3.6701).toString())
                 binding.canadaEdtText.setText(if (it == "") "" else (it.toDouble() / 3.6701 * 1.3434).toString())
                 binding.englandEdtText.setText(if (it == "") "" else (it.toDouble() / 3.6701 * 0.8157).toString())
+                binding.iranEdtText.setText(if (it == "") "" else (it.toDouble() / 3.6701 * 42423.2432).toString())
+                binding.euroEdtText.setText(if (it == "") "" else (it.toDouble() / 3.6701 * 0.9499).toString())
+            }
+        }
+
+        viewModel.getIranTextObserver().observe(this) {
+            if (binding.iranEdtText.isFocused) {
+                binding.usaEdtText.setText(if (it == "") "" else (it.toDouble() / 42423.2432).toString())
+                binding.canadaEdtText.setText(if (it == "") "" else (it.toDouble() / 42423.2432 * 1.3434).toString())
+                binding.englandEdtText.setText(if (it == "") "" else (it.toDouble() / 42423.2432 * 0.8157).toString())
+                binding.emiratesEdtText.setText(if (it == "") "" else (it.toDouble() / 42423.2432 * 3.6701).toString())
+                binding.euroEdtText.setText(if (it == "") "" else (it.toDouble() / 42423.2432 * 0.9499).toString())
+            }
+        }
+
+        viewModel.getEuroTextObserver().observe(this) {
+            if (binding.euroEdtText.isFocused) {
+                binding.usaEdtText.setText(if (it == "") "" else (it.toDouble() / 0.9499).toString())
+                binding.canadaEdtText.setText(if (it == "") "" else (it.toDouble() / 0.9499 * 1.3434).toString())
+                binding.englandEdtText.setText(if (it == "") "" else (it.toDouble() / 0.9499 * 0.8157).toString())
+                binding.iranEdtText.setText(if (it == "") "" else (it.toDouble() / 0.9499 * 42423.2432).toString())
+                binding.emiratesEdtText.setText(if (it == "") "" else (it.toDouble() / 0.9499 * 3.6701).toString())
             }
         }
     }
@@ -92,6 +122,8 @@ private class InputTextWatcher(
             "emirates" -> viewModel.setEmiratesText(p0.toString())
             "england" -> viewModel.setEnglandText(p0.toString())
             "canada" -> viewModel.setCanadaText(p0.toString())
+            "iran" -> viewModel.setIranText(p0.toString())
+            "euro" -> viewModel.setEuroText(p0.toString())
         }
     }
 }
