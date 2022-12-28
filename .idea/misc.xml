@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/projects/avarsaji/Crypto/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.209" />
+        <entry key="..\:/projects/avarsaji/Crypto/app/src/main/res/drawable/usa_flag_background.xml" value="0.352" />
+        <entry key="..\:/projects/avarsaji/Crypto/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/projects/avarsaji/Crypto/app/src/main/res/mipmap-anydpi-v26/usa_flag.xml" value="0.352" />
+        <entry key="..\:/projects/avarsaji/Crypto/app/src/main/res/mipmap-anydpi-v26/usa_flag_round.xml" value="0.209" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
